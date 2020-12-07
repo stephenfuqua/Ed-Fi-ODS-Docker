@@ -33,7 +33,8 @@ services:
   nginx:
      image: edfialliance/ods-api-web-gateway:${TAG}
      ports:
-       - "5001:5001"
+       - "5000:5000"
+       - "443:443"
      container_name: ed-fi-gateway
      restart: always
      hostname: nginx
