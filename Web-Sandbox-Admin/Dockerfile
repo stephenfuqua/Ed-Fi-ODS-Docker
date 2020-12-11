@@ -6,7 +6,7 @@
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine
 LABEL maintainer="Ed-Fi Alliance, LLC and Contributors <techsupport@ed-fi.org>"
 
-ENV VERSION="5.2.0-b13388"
+ENV VERSION="5.2.0-b13448"
 
 WORKDIR /app
 COPY appsettings.template.json /app/appsettings.template.json
@@ -20,7 +20,7 @@ RUN apk add unzip dos2unix bash gettext && \
     dos2unix /app/*.json && \
     dos2unix /app/*.sh && \
     chmod 700 /app/run.sh && \
-    rm -f /app/*.exe 
+    rm -f /app/*.exe
 
 EXPOSE "80"
 
